@@ -9,7 +9,6 @@
     name: '*'
     state: latest
 
-
 - name: remove dependencies that are no longer required
   become: yes
   yum:
@@ -19,7 +18,7 @@
   become: yes
   yum:
     name: ["nodejs", "npm"]
-    state: latest
+    state: present
     update_cache: yes
 
 - name: "install pm2"
