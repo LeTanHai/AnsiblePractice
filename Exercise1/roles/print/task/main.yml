@@ -1,0 +1,8 @@
+---
+ - name: Print env variable
+   shell: echo $PATH
+   register: print_result # you can create a variable from the output of task
+
+ - name: print message
+   debug:
+     msg: "{{ print_result.stdout_lines }}"
