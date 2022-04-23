@@ -17,9 +17,8 @@
 - name: "install dependencies."
   become: yes
   yum:
-    name: ["nodejs", "npm"]
+    name: nodejs
     state: present
-    update_cache: yes
 
 - name: "install pm2"
   become: yes
